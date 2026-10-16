@@ -1,0 +1,33 @@
+using UnityEngine;
+
+public class Propulsor: MonoBehaviour
+{
+    private SpriteRenderer spriteRenderer;
+
+    void start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    void update()
+    {
+         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            spriteRenderer.color = Color.red;
+        };
+
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            spriteRenderer.color = Color.yellow;
+        };
+
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+             spriteRenderer.color = Color.orange;
+        };
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+             spriteRenderer.color = Color.orange;
+        };
+    }
+}
